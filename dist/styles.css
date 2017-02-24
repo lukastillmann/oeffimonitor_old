@@ -1,0 +1,124 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  background: #d6e0e8;
+  text-align: center;
+  color: #222;
+}
+
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+.card {
+  margin: 1em auto;
+  background: #fff;
+  min-height: 200px;
+  display: block;
+  background: url('http://www.bildstrecke.at/Pictures/2016/08/00012/25/650016148-3.jpg') #fff;
+}
+
+.card__header {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  align-items: baseline;
+}
+
+
+.card__flex {
+  padding: 1em;
+  align-self: center;
+  text-align: center;
+}
+
+.card__flex--first {
+  padding: 1em;
+  flex-grow: 0;
+  align-self: center;
+}
+
+.card__flex--second {
+  padding: 1em;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card__line {
+  background: #27ae60;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.3em;
+  padding: .5em;
+  display: inline-block;
+}
+
+.card__dirtitle {
+  display: block;
+  margin: 0;
+}
+
+.card__dirname {
+  display: block;
+  margin: 0;
+}
+
+.card__body {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.card__flex--main {
+  flex-grow: 1;
+  padding-top: 1em;
+}
+
+.card__flex--pre,
+.card__flex--suf {
+  flex-grow: 1;
+  self-align: center;
+  text-align: center;
+}
+
+.card__flex--suf {
+  text-align: left;
+}
+
+.card__minnumber {
+  font-size: 8em;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.card__mintext {
+  display: inline-block;
+}
+
+.card__footer {
+  background: #2980b9;
+  width: 100%;
+  color: #fff;
+  padding: .5em 0;
+  font-size: 1.3em;
+}
+
+.card__minnumber--next {
+  font-size: 1.5em;
+}
+
+.card__mintext--next {
+  font-size: 1em;
+}
