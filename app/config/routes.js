@@ -7,12 +7,16 @@ var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../components/Main');
 var Home = require('../components/Home');
 var Card =require('../components/Card');
+var Search = require('../components/Search');
+var Selecttest = require('../components/Selecttest');
 
 var routes = (
   <Router history={hashHistory}>
-    <Route path='/' component={Card}>
+    <Route path='/' component={Search}/>
+    <Route path='/show' component={Card}>
       <IndexRoute component={Home} />
     </Route>
+    <Route path='/Select' component={Selecttest} />
   </Router>
 );
 

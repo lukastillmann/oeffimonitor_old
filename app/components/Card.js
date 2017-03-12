@@ -99,7 +99,7 @@ var CardsContainer = React.createClass({
     return out;
   },
   loadData: function() {
-    var rbl = this.props.location.query.rbl || '';
+    var rbl = (this.props.location.query) ? this.props.location.query.rbl : '147';
     var that = this;
     fetch('/search?rbl=' + rbl).then(
       function(response) {
@@ -113,15 +113,19 @@ var CardsContainer = React.createClass({
         };
         // this.setState(data);
         var _this = that;
-        response.json().then(function(json) {
-          console.log('response:', json.data.monitors);
-          data.station = json.data.monitors[0].locationStop.properties.title;
-          data.line = json.data.monitors[0].lines[0].name;
-          data.towards = json.data.monitors[0].lines[0].towards;
-          data.min_next = json.data.monitors[0].lines[0].departures.departure[0].departureTime.countdown;
-          data.min_afternext = json.data.monitors[0].lines[0].departures.departure[1].departureTime.countdown;
-          _this.setState(data);
-        })
+        if (!response.ok) {
+          alert('error in link');
+        } else {
+          response.json().then(function(json) {
+            data.station = json.data.monitors[0].locationStop.properties.title;
+            data.line = json.data.monitors[0].lines[0].name;
+            data.towards = json.data.monitors[0].lines[0].towards;
+            data.min_next = json.data.monitors[0].lines[0].departures.departure[0].departureTime.countdown;
+            data.min_afternext = json.data.monitors[0].lines[0].departures.departure[1].departureTime.countdown;
+            _this.setState(data);
+
+            })
+         }
       }
     )
   },

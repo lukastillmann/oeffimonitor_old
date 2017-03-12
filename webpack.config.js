@@ -30,6 +30,13 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
+      {
+        test: /\.css?$/,
+        exclude: [
+          path.resolve(__dirname, '/node_modules/')
+        ],
+        loader: ['style-loader', 'css-loader'] 
+      }
     ]
   },
 
