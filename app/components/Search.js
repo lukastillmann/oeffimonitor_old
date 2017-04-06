@@ -80,7 +80,7 @@ var SearchResults = React.createClass({
   listItems: function() {
     if (this.props.results) {
       return this.props.results.map(function(item) {
-        return <li id={item.value} key={item.value}>{item.name}</li>
+        return <li key={item.value}>{item.name}</li>
       });
     }
   },
